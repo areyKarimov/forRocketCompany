@@ -1,0 +1,62 @@
+.button {
+    background: $button_bg;
+    border-radius: 27px;
+    min-width: 263px;
+    min-height: 54px;
+    padding: 0 20px;
+    color: $btn_text;
+    transform: scale(1);
+    transition: all 0.3s ease-in;
+    font-weight: 900;
+    &--request {
+        position: relative;
+        padding-left: 50px;
+        &:after {
+            font-family: 'icomoon';
+            position: absolute;
+            content: "\e90b";
+            font-size: 25px;
+            left: 16px;
+            top: 13px;
+        }
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+    &--transparent {
+        background: transparent;
+        border: 1px solid $light-text;
+        color: $light-text;
+        padding: 15px 60px;
+        &:hover {
+            background: $light-text;
+            color: #484D85;
+        }
+        &--inv {
+            background: transparent;
+            color: $btn_text;
+            border: 1px solid $btn_text;
+            min-width: unset;
+            padding: 0 60px;
+            &:hover {
+                background: $btn_text;
+                color: $light-text;
+            }
+        }
+    }
+    &--footer {
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button {
+        min-height: 44px;
+        &--request {
+            &:after {
+                top: 8px;
+            }
+        }
+    }
+}

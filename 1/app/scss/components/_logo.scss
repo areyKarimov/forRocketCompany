@@ -1,0 +1,36 @@
+.logo {
+    position: relative;
+    z-index: 10;
+    & svg {
+        fill: #000;
+    }
+    &--menu-burger {
+        & svg {
+            width: 57px;
+            height: 26px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        align-self: start;
+        margin-bottom: 30px;
+        &--footer {
+            margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo--footer {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo svg {
+        width: 140px;
+    }
+}

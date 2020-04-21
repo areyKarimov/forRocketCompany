@@ -1,0 +1,22 @@
+.select {
+    display: none;
+    color: $dark_text;
+    padding: 10px 27px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in;
+    background-color: #E8E9F4;
+    border-radius: 20px;
+    align-self: center;
+    outline: none;
+    margin: 0 auto;
+    text-align: center;
+    & option {
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .select {
+        display: block;
+    }
+}

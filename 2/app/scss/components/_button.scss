@@ -1,0 +1,21 @@
+.button {
+    padding: 20px 70px;
+    text-transform: uppercase;
+    color: $title;
+    background: $light-text;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 28px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in;
+    &:hover {
+        transform: scale(1.2);
+    }
+    &-permissionJsBar {
+        padding: 10px 35px;
+        color: $permissionBar-bg;
+        text-transform: none;
+        font-size: 12px;
+        border-radius: 16px;
+    }
+}

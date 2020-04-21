@@ -1,0 +1,267 @@
+.header-index {
+    position: relative;
+    width: 100%;
+    height: 730px;
+    padding: 28px 0;
+    margin: 0 0 80px 0;
+    overflow: hidden;
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    &__bg {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -100;
+        & svg {
+            width: 100%;
+            height: 720px;
+            transform: scaleX(1.25);
+        }
+    }
+    &__subbg {
+        display: block;
+        position: absolute;
+        height: 95%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -101;
+        & svg {
+            width: 100%;
+            height: 730px;
+            transform: scaleX(1.35);
+        }
+    }
+    &__smalldots {
+        position: absolute;
+        bottom: 40%;
+        left: 37%;
+        opacity: 0.2;
+        width: 73px;
+        height: 66px;
+    }
+    &__largedots {
+        position: absolute;
+        bottom: 35%;
+        right: 32%;
+        z-index: -1;
+        opacity: 0.2;
+        width: 113px;
+        height: 100px;
+    }
+    &__lines {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        z-index: -1;
+        opacity: 0.2;
+    }
+    &__angle {
+        content: '';
+        position: absolute;
+        top: -19%;
+        left: -350px;
+        width: 800px;
+        height: 400px;
+        background: #5860B0;
+        border-radius: 80px;
+        transform: rotate(-25deg);
+        z-index: -1;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__left {
+        & h1 {
+            font-size: 60px;
+            line-height: 70px;
+            color: $light_text;
+            font-family: 'Museo Sans Cyrl 500', sans-serif;
+            margin-bottom: 30px;
+        }
+    }
+    &__animation {
+        width: 580px;
+        height: 545px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .header-index {
+        &__bg {
+            & svg {
+                width: 100%;
+                height: 770px;
+                transform: scaleX(1);
+            }
+        }
+        &__subbg {
+            & svg {
+                height: 792px;
+                width: 100%;
+                transform: scaleX(1);
+            }
+        }
+        &__angle {
+            left: -535px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .header-index {
+        height: 900px;
+        &__menu {
+            flex-direction: column;
+        }
+        &__inner {
+            flex-direction: column;
+        }
+        &__left {
+            margin-top: 30px;
+            text-align: center;
+            & button {
+                margin-top: 300px;
+            }
+        }
+        &__animation {
+            position: absolute;
+            bottom: 22%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 245px;
+        }
+        &__largedots {
+            width: 63px;
+            height: 50px;
+        }
+        &__smalldots {
+            width: 43px;
+            height: 36px;
+        }
+        &__bg {
+            & svg {
+                width: 150%;
+                height: 1000px;
+            }
+        }
+        &__subbg {
+            & svg {
+                width: 155%;
+                height: 1000px;
+            }
+        }
+        &__lines {
+            transform: scaleY(1.5);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-index {
+        &__bg {
+            & svg {
+                width: 185%;
+            }
+        }
+        &__subbg {
+            & svg {
+                width: 190%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-index {
+        height: 700px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        &__left {
+            & h1 {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+        .button--transparent {
+            margin-top: 150px;
+        }
+        &__animation {
+            height: 140px;
+            bottom: 37%;
+        }
+        &__bg {
+            & svg {
+                width: 225%;
+                height: 750px;
+            }
+        }
+        &__subbg {
+            & svg {
+                width: 230%;
+                height: 750px;
+            }
+        }
+        &__lines {
+            transform: scaleY(1);
+            left: -10%;
+        }
+        &__angle {
+            left: -600px;
+            transform: rotate(-15deg);
+            top: -30%;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header-index {
+        height: 620px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        &__left {
+            & h1 {
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+        .button--transparent {
+            margin-top: 150px;
+        }
+        &__animation {
+            height: 140px;
+            bottom: 28%;
+        }
+        &__bg {
+            & svg {
+                width: 265%;
+                height: 680px;
+            }
+        }
+        &__subbg {
+            & svg {
+                width: 270%;
+                height: 680px;
+            }
+        }
+        &__lines {
+            left: -30%;
+        }
+        &__angle {
+            left: -550px;
+            transform: rotate(-13deg);
+            top: -40%;
+            border-radius: 60px;
+        }
+    }
+}

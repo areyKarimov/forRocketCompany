@@ -1,0 +1,72 @@
+.expert {
+    & .title {
+        margin-bottom: 110px;
+    }
+    padding: 90px 0;
+    background: $expert-bg;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__item {
+        width: calc(33.3% - 20px);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 100px;
+        & span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 145px;
+            width: 145px;
+            border-radius: 50%;
+            border: 1px solid $title;
+            margin-bottom: 60px;
+        }
+        &:nth-child(1) span::before {
+            content: url('../img/expert/icon1.png');
+        }
+        &:nth-child(2) span::before {
+            content: url('../img/expert/icon2.png');
+        }
+        &:nth-child(3) span::before {
+            content: url('../img/expert/icon3.png');
+        }
+        &:nth-child(4) span::before {
+            content: url('../img/expert/icon4.png');
+        }
+        &:nth-child(5) span::before {
+            content: url('../img/expert/icon5.png');
+        }
+        &:nth-child(6) span::before {
+            content: url('../img/expert/icon6.png');
+        }
+    }
+    &__iconTitle {
+        text-transform: uppercase;
+        color: $title;
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .expert {
+        &__item {
+            width: calc(50% - 15px);
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .expert {
+        padding: 0;
+        &__item {
+            width: 90%;
+        }
+    }
+}

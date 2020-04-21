@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?i72zum');
+    src: url('../fonts/icomoon.eot?i72zum#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?i72zum') format('truetype'), url('../fonts/icomoon.woff?i72zum') format('woff'), url('../fonts/icomoon.svg?i72zum#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Group-45 .path1:before {
+    content: "\e910";
+    color: rgb(239, 206, 74);
+    opacity: 0.4152;
+}
+
+.icon-Group-45 .path2:before {
+    content: "\e911";
+    margin-left: -1.0771484375em;
+    color: rgb(239, 206, 74);
+}
+
+.icon-analytics:before {
+    content: "\e900";
+}
+
+.icon-android-logo:before {
+    content: "\e901";
+}
+
+.icon-apple:before {
+    content: "\e902";
+}
+
+.icon-browser:before {
+    content: "\e903";
+}
+
+.icon-calendar:before {
+    content: "\e904";
+}
+
+.icon-check:before {
+    content: "\e905";
+}
+
+.icon-crm:before {
+    content: "\e906";
+}
+
+.icon-meeting:before {
+    content: "\e907";
+    color: #5860b0;
+}
+
+.icon-monitor:before {
+    content: "\e908";
+}
+
+.icon-online:before {
+    content: "\e909";
+    color: #5860b0;
+}
+
+.icon-pie-chart:before {
+    content: "\e90a";
+    color: #5860b0;
+}
+
+.icon-plus-sign:before {
+    content: "\e90b";
+    color: #484d85;
+}
+
+.icon-prototype:before {
+    content: "\e90c";
+}
+
+.icon-rectangle:before {
+    content: "\e90d";
+}
+
+.icon-star:before {
+    content: "\e90e";
+    color: #efce4a;
+}
+
+.icon-wall-clock:before {
+    content: "\e90f";
+}

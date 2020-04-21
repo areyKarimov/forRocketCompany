@@ -1,0 +1,86 @@
+.menu {
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    background: $light-text;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__list {
+        margin: 30px 0;
+        cursor: pointer;
+        &Item {
+            text-align: center;
+            & a {
+                display: block;
+                padding: 20px 0;
+                opacity: 0.5;
+                font-size: 50px;
+                color: $dark-text;
+                transition: all 0.3s ease-in;
+                font-weight: 300;
+                cursor: pointer;
+            }
+            &:hover {
+                & a {
+                    opacity: 1;
+                    color: $title;
+                }
+            }
+        }
+    }
+    &__socials {
+        padding: 40px 0 70px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid rgba(90, 90, 90, 0.5);
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            opacity: 0.5;
+            background: $dark-text;
+            transition: all 0.3s ease-in;
+            margin-left: 35px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:hover {
+                background: $title;
+                opacity: 1;
+            }
+            &:nth-child(1)::before {
+                position: relative;
+                bottom: -5px;
+                height: 80%;
+                width: auto;
+                content: url(../img/menu/icon1.png);
+            }
+            &:nth-child(2)::before {
+                position: relative;
+                bottom: -8px;
+                height: 80%;
+                width: auto;
+                content: url(../img/menu/icon2.png);
+            }
+            &:nth-child(3)::before {
+                position: relative;
+                bottom: -7px;
+                height: 80%;
+                width: auto;
+                content: url(../img/menu/icon3.png);
+            }
+            &:nth-child(4)::before {
+                position: relative;
+                bottom: -9px;
+                height: 80%;
+                width: auto;
+                content: url(../img/menu/icon4.png);
+            }
+        }
+    }
+}

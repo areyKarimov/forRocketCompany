@@ -1,0 +1,101 @@
+.stages {
+    position: relative;
+    top: 200px;
+    z-index: 10;
+    padding: 75px 100px;
+    width: 90%;
+    -webkit-box-shadow: -1px -2px 15px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: -1px -2px 15px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: -1px -2px 15px 0px rgba(0, 0, 0, 0.15);
+    margin: 0 auto;
+    border-radius: 60px 60px 0 60px;
+    background: $stages-bg;
+    &__items {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-row-gap: 65px;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'icomoon';
+            width: 130px;
+            height: 130px;
+            border: 1px solid #7379D4;
+            border-radius: 15% 15% 0 15%;
+            color: #000;
+            margin-bottom: 24px;
+            &::before {
+                font-family: 'icomoon';
+                color: #7379D4;
+                font-size: 50px;
+            }
+        }
+        &:nth-child(1) span::before {
+            content: '\e900';
+        }
+        &:nth-child(2) span:before {
+            content: '\e90c'
+        }
+        &:nth-child(3) span:before {
+            content: '\e903'
+        }
+        &:nth-child(4) span:before {
+            content: '\e90f'
+        }
+        &:nth-child(5) span:before {
+            content: '\e908'
+        }
+        &:nth-child(6) span:before {
+            content: '\e906'
+        }
+        &-title {
+            position: relative;
+            z-index: 10;
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $dark_text;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .stages {
+        &__items {
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .stages {
+        padding: 30px 30px;
+        &__items {
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__item-title {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .stages {
+        & .container {
+            padding: 0;
+        }
+    }
+}

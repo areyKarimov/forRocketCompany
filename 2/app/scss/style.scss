@@ -1,0 +1,36 @@
+@import url(./normalize.css),
+url(./stylesheet.css),
+url(./icomoon.css),
+'variables',
+'components',
+'sections';
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 1170px;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 30px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}

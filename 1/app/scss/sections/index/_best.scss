@@ -1,0 +1,23 @@
+.best {
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 44px;
+        flex-wrap: wrap;
+        &+button {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+.menu__item-sub {
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 480px) {
+    .best__items {
+        justify-content: center;
+        margin-top: 30px;
+    }
+}

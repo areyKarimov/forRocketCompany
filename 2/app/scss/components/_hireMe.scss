@@ -1,0 +1,29 @@
+.hireMe {
+    position: relative;
+    max-width: 1170px;
+    width: 50%;
+    &__form {
+        position: relative;
+        width: 100%;
+        background: $light-text;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0;
+    }
+    &__title {
+        font-size: 50px;
+        color: $title;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
+    &__input {
+        width: 60%;
+        border: 1px solid rgba(90, 90, 90, 0.5);
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+    }
+}

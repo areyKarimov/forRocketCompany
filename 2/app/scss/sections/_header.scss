@@ -1,0 +1,111 @@
+.header {
+    width: 100%;
+    height: 100vh;
+    & .burger {
+        right: 0;
+        top: 35px;
+    }
+    &__bg {
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        & img {
+            object-fit: fill;
+            width: 100%;
+            height: 100vh;
+        }
+    }
+    &__photo {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 120px 0 50px;
+        z-index: 2;
+        &Wrapper {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            z-index: 1;
+            background: #fff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        &::before {
+            width: 110%;
+            height: 110%;
+            opacity: 0.2;
+        }
+        &::after {
+            width: 120%;
+            height: 120%;
+            opacity: 0.4;
+        }
+    }
+    &__title {
+        font-size: 50px;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin: 0 0 40px 0;
+        width: 70%;
+        color: $light-text;
+        text-align: center;
+    }
+    &__caption {
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-bottom: 75px;
+        width: 70%;
+        color: $light-text;
+        text-align: center;
+    }
+    &__down {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        z-index: 10;
+        & span {
+            content: url(../img/header/down-arrow.png);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        .burger {
+            right: 5%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        &__title {
+            font-size: 25px;
+        }
+        &__caption {
+            font-size: 12px;
+            margin-bottom: 25px;
+        }
+        &__photo {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}

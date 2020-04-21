@@ -1,0 +1,53 @@
+.select {
+    position: relative;
+    cursor: pointer;
+    &.active &__body {
+        display: block;
+    }
+    &__current {
+        width: 90px;
+        position: relative;
+        font-size: 20px;
+        padding: 10px 30px 10px 15px;
+        display: inline-block;
+        border: 1px solid $border-btn;
+        color: $light-text;
+        background: $item-bg;
+        transition: all 0.3s ease;
+        &:hover {
+            background: $bg-btn;
+        }
+        &::after {
+            position: absolute;
+            content: '\ea50';
+            font-size: 25px;
+            font-family: 'icomoon';
+            top: 2px;
+            right: 7px;
+            color: $light-text;
+            z-index: 10;
+            transform: rotate(180deg);
+        }
+    }
+    &__body {
+        position: absolute;
+        top: 44px;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        display: none;
+    }
+    &__item {
+        width: 90px;
+        position: relative;
+        font-size: 20px;
+        padding: 10px 30px 10px 15px;
+        border: 1px solid $border-btn;
+        color: $light-text;
+        background: $item-bg;
+        transition: all 0.3s ease;
+        &:hover {
+            background: $bg-btn;
+        }
+    }
+}

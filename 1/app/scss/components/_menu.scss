@@ -1,0 +1,184 @@
+.menu {
+    display: flex;
+    &__item {
+        position: relative;
+        color: $light_text;
+        text-decoration: none;
+        margin: 0 20px;
+        font-size: 14px;
+        line-height: 16px;
+        font-family: 'Museo Sans Cyrl 100';
+        &::after {
+            position: absolute;
+            content: '';
+            right: -20px;
+            bottom: 3px;
+            width: 1px;
+            height: 14px;
+            background-color: $light_text;
+        }
+        &:last-child::after {
+            display: none;
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            right: 0px;
+            bottom: -5px;
+            width: 100%;
+            height: 1px;
+            background-color: $light_text;
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+        &--sub {
+            color: $dark_text;
+            padding: 10px 27px;
+            text-transform: uppercase;
+            transition: all 0.3s ease-in;
+            margin-bottom: 20px;
+            &-active {
+                background-color: #E8E9F4;
+                border-radius: 20px;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &::after {
+                bottom: 12px;
+                background-color: $dark_text;
+            }
+            &::before {
+                display: none;
+            }
+            &:hover {
+                background-color: #E8E9F4;
+                border-radius: 20px;
+            }
+        }
+    }
+    &--footer {
+        position: relative;
+        z-index: 10;
+        opacity: 0.5;
+        margin-bottom: 20px;
+    }
+    &-burger {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        perspective: 200px;
+        &__item {
+            padding: 30px 0 0 0;
+            opacity: 0.8;
+            backface-visibility: hidden;
+            transform: rotateX(-180deg);
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 20;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -300%;
+            right: -200%;
+            border-radius: 0 0 0 100vw;
+            width: 200%;
+            height: 300%;
+            background: #5860B0;
+        }
+        & .logo--menu-burger {
+            position: absolute;
+            top: 35px;
+            left: -100vw;
+            transition: 0.7s;
+        }
+        &.active {
+            display: flex;
+            &::before {
+                animation: animate-burger-bg 0.5s linear forwards;
+            }
+            & .menu-burger {
+                display: flex;
+                &__item {
+                    animation: animate-burger-item 0.5s linear forwards;
+                    @for $i from 1 through 6 {
+                        &:nth-child(#{$i}) {
+                            animation-delay: $i * 0.1s;
+                        }
+                    }
+                }
+            }
+            & .logo--menu-burger {
+                left: 15px;
+            }
+        }
+    }
+}
+
+@keyframes animate-burger-bg {
+    0% {
+        top: -300%;
+        right: -200%;
+    }
+    100% {
+        top: -10%;
+        right: -50%;
+    }
+}
+
+@keyframes animate-burger-item {
+    0% {
+        transform: rotateX(-180deg);
+    }
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .menu--header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu--footer {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        &--footer {
+            flex-direction: column;
+            & .menu__item {
+                text-align: center;
+                margin-top: 10px;
+                &::after,
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        &--sub {
+            display: none;
+        }
+    }
+}

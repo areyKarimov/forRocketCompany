@@ -1,0 +1,35 @@
+.clients {
+    & .title {
+        margin-bottom: 60px;
+    }
+    padding: 0 0 90px;
+    background: $clients-bg;
+    &__items {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        & img {
+            filter: grayscale(100%);
+            opacity: 0.3;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .clients {
+        &__item {
+            padding: 0 10%;
+            width: 50%;
+            margin-bottom: 30px;
+            & img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+}

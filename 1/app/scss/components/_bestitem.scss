@@ -1,0 +1,167 @@
+.bestitem {
+    padding: 24px 20px;
+    border-radius: 48px;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(79, 83, 123, 0.0753387);
+    overflow: hidden;
+    width: calc(25% - 20px);
+    color: $light-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 290px;
+        transform: rotate(-20deg);
+        top: -110px;
+        left: -100px;
+        background: #5860B0;
+        z-index: -1;
+    }
+    &__upper {
+        display: flex;
+        margin-bottom: 24px;
+    }
+    &__logo {
+        margin-right: 15px;
+        width: 80px;
+        height: 80px;
+    }
+    &__ratevalue {
+        font-size: 13px;
+        line-height: 22px;
+        & strong {
+            font-size: 22px;
+            font-family: 'Museo Sans Cyrl 500';
+            color: #B1E88A;
+        }
+    }
+    &__stars {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 9px;
+        & span {
+            content: url(../img/best-section/star.png);
+            width: 12px;
+            height: 12px;
+            &:last-child {
+                content: url(../img/best-section/star-half.png);
+            }
+        }
+    }
+    &__country {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__flag {
+        content: url(../img/best-section/ukraine.png);
+        height: 12px;
+        margin-right: 5px;
+    }
+    &__countryname {
+        font-size: 13px;
+        line-height: 22px;
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 1.28571px;
+        text-align: center;
+        margin-bottom: 7px;
+    }
+    &__cost {
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__datasheet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-item {
+            margin: 0 0 10px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $dark_text;
+            text-align: center;
+            &::before {
+                font-family: 'icomoon';
+                color: $best-icon-color;
+                font-size: 20px;
+            }
+            &:nth-child(1)::before {
+                content: '\e909';
+            }
+            &:nth-child(2)::before {
+                content: '\e90a';
+            }
+            &:nth-child(3)::before {
+                content: '\e907';
+            }
+        }
+        &-title {
+            font-size: 13px;
+            line-height: 22px;
+        }
+        &-text {
+            font-size: 13px;
+            line-height: 22px;
+        }
+        &-list {
+            & li {
+                display: flex;
+                flex-direction: column;
+                font-size: 13px;
+                line-height: 20px;
+                margin: 10px 0;
+                &::before {
+                    font-family: 'icomoon';
+                    content: '\e905';
+                    font-size: 8px;
+                }
+                &:last-child {
+                    margin-top: 20px;
+                    color: $btn_text;
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .bestitem {
+        width: 45%;
+        border-radius: 90px;
+        &::before {
+            height: 315px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bestitem {
+        width: 90%;
+        border-radius: 90px;
+        margin-top: 20px;
+        &::before {
+            height: 315px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .bestitem {
+        &::before {
+            height: 305px;
+        }
+    }
+}

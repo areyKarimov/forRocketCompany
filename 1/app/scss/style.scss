@@ -1,0 +1,21 @@
+@import url(../css/normalize.css),
+url(../css/icomoon.css),
+url(../css/stylesheet.css),
+'variables',
+'components',
+'sections';
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Museo Sans Cyrl 500', sans-serif;
+    width: 100vw;
+}
+
+@media screen and (max-width: 991px) {
+    .container {
+        padding: 0 15px;
+    }
+}

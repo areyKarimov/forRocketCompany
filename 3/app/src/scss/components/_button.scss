@@ -1,0 +1,13 @@
+.button {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid $border-btn;
+    background: $bg-btn;
+    color: $light-text;
+    transition: all 0.3s ease;
+    &:hover {
+        color: $bg-btn;
+        background: $light-text;
+    }
+}

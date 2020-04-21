@@ -1,0 +1,27 @@
+.permissionJsBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    background: $permissionBar-bg;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.5s ease-in;
+    & .container {
+        flex-direction: row;
+        justify-content: center;
+    }
+    &__text {
+        font-size: 14px;
+        color: $light-text;
+        line-height: 14px;
+        margin-right: 50px;
+    }
+    &.hidden {
+        top: -100%;
+    }
+}

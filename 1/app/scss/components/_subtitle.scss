@@ -1,0 +1,61 @@
+.subtitle {
+    color: $subtitle;
+    &__title {
+        font-size: 60px;
+        line-height: 70px;
+        margin: 0 0 35px 0;
+    }
+    &__caption {
+        position: relative;
+        padding-left: 40px;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0 0 20px 0;
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: url(../img/crm-system/rectangle.svg);
+            width: 10px;
+            height: 10px;
+        }
+    }
+    &--footer {
+        position: relative;
+        z-index: 10;
+        color: $light_text;
+        max-width: 60%;
+        & .subtitle__title {
+            white-space: nowrap;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .subtitle {
+        margin: 0;
+        text-align: center;
+        &__title {
+            font-size: 25px;
+            line-height: 35px;
+            margin: 0 0 45px 0;
+        }
+        &__caption {
+            font-size: 14px;
+            padding: 0 10px;
+            &::before {
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .subtitle {
+        &__caption {
+            padding: 0;
+        }
+    }
+}

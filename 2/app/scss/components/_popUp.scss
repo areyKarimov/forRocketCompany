@@ -1,0 +1,78 @@
+.popUp {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    &.active {
+        display: flex;
+        opacity: 0;
+        animation: animate-active 0.5s forwards;
+    }
+    &.hidden {
+        display: flex;
+        opacity: 1;
+        animation: animate-hidden 0.5s forwards;
+    }
+    &__lang {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        color: rgba(90, 90, 90, 0.5);
+        &::after {
+            content: url(../img/menu/uk.png);
+            margin-left: 15px;
+        }
+    }
+    &__cancel {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        transform: scale(1);
+        transition: transform 0.3s ease-in;
+        z-index: 10;
+        &:hover {
+            transform: scale(1.2);
+        }
+        & span {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: '';
+            width: 30px;
+            height: 1px;
+            background: $title;
+            &:nth-child(1) {
+                transform: rotate(45deg) translateY(-50%);
+            }
+            &:nth-child(2) {
+                transform: rotate(-45deg) translateY(-50%);
+            }
+        }
+    }
+}
+
+@keyframes animate-active {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate-hidden {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
