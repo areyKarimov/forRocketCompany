@@ -1,0 +1,87 @@
+.footer {
+  position: relative;
+  width: 100%;
+  order: 3;
+  &__main{
+    padding: 35px 0 ;
+    background: $grey-light;
+    & .container{
+      display: flex;
+    }
+    &-title{
+      margin-bottom: 27px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 115%;
+    }
+    & .request-form{
+      padding: 0 0 0 75px;
+      width: 35%;
+    }
+  }
+  &__services{
+    width: 25%;
+    padding: 0 75px 0 0;
+    &-item{
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 115%;
+      margin-bottom: 17px;
+    }
+  }
+  &__downside{
+    padding: 10px 0;
+    background: $grey;
+    & .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &::after{
+        display: none;
+      }
+    }
+    
+  }
+  &__socials{
+    display: flex;
+  }
+  &__rights{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 115%;
+  }
+  &__social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid $black-light;
+    &:first-of-type{
+      margin: 0;
+    }
+    & svg{
+      transition: $slow-transition;
+    }
+    &:hover svg{
+      transform: rotateY(360deg);
+    }
+    &-icon{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__author{
+    display: flex;
+    align-items: center;
+    &-text{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #B2B2B2;
+      margin-right: 15px;
+    }
+  }
+}

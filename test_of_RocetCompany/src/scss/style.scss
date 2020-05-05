@@ -1,0 +1,33 @@
+/*
+INCLUDE ALL SASS FILES
+ */
+
+
+@import url("../../node_modules/swiper/css/swiper.min.css");
+
+// CONFIGS
+@import "config"; // include default and main variables
+
+// PRELOADER
+@import "_parts/preloader";
+
+// SECTIONS
+@import "_layouts/view-header"; // HEADER
+@import "_layouts/view-section"; // CONTENT
+@import "_layouts/view-footer"; // FOOTER
+
+// PARTS
+@import "_parts/buttons"; // buttons
+@import "_parts/logo"; // logo
+@import "_parts/menu"; // menu in header and footer
+@import "_parts/contacts"; // contacts list in header and footer
+@import "_parts/request-form";// requst form in first banner and footer
+@import "_parts/title";// header and sections titles
+@import "_parts/sub-banner"; // banners between sections
+@import "_parts/see-all"; // link with arrow, open section page
+@import "_parts/review"; // review articles
+@import "_parts/date"; // article date
+@import "_parts/stars"; // rate stars
+@import "_parts/textWP"; // text which is going to be change in WP
+@import "_parts/swiper"; // sliders
+@import "_parts/pop-up"; // pop-ups

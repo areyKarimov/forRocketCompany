@@ -1,0 +1,60 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  order: 1;
+  &__upside{
+    z-index: 2;
+    background: $primary-color;
+    padding: 20px 0;
+    & .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__main{
+    position: relative;
+    overflow: hidden;
+  }
+  &__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content{
+    padding: 145px 0 110px 35px;
+    width: 60%;
+    border-left: 1px solid $grey;
+  }
+  &__benefits{
+    margin-bottom: 35px;
+    &-item{
+      display: flex;
+      margin-bottom: 20px;
+    }
+    &-icon{
+      width: 50px;
+      height: 50px;
+      padding: 10px; 
+      margin-right: 25px; 
+      border: 2px solid $secondary-color;
+      border-radius: 50%;
+    }
+    &-text{
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+  & .title{
+    margin-bottom: 50px;
+  }
+}

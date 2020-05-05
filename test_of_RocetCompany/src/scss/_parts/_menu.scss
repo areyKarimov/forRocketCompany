@@ -1,0 +1,115 @@
+.menu{
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+    z-index: 1;
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background:  $grey-light;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    & .container{
+        background: $primary-color;
+    }
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(8 , 1fr);
+        grid-column-gap: 78px;
+    }
+    &__item{
+        position: relative;
+        &:hover .menu__submenu{
+            display: flex;
+            animation: submenuAnim 0.3s forwards;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 50%;
+            width: 1px;
+            height: 50%;
+            background: $grey-light;
+            transform: translateY(-50%);
+        }
+        &:first-of-type{
+            margin: 0;
+            &::before{
+                display: none;
+            }
+        }
+        &-icon{
+            margin-left: 5px;
+        }
+    }
+    &__link{
+        position: relative;
+        display: inline-block;
+        padding: 12px 0;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+            height: 3px;
+            width: 100%;
+            background: $grey-light;
+            transition: $default-transition;
+        }
+        &:hover{
+            &:after{
+                left: 0;
+            }
+        }
+        
+    }
+    &__submenu{
+        position: absolute;
+        display: none;
+        left: -39px;
+        width: 325px;
+        padding: 0 20px;
+        bottom: 0;
+        background: $white;
+        border: 1px solid $grey-light;
+        border-top: 3px solid $grey-light;
+        z-index: -1;
+        &-link{
+            white-space: normal;
+            text-align: left;
+        }
+    }
+    &--footer{
+        margin-bottom: 0;
+        &::before{
+            display: none;
+        }
+        & .menu__item{
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes submenuAnim{
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: -260px;
+    }
+}

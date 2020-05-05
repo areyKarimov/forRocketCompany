@@ -1,0 +1,80 @@
+.sub-banner{
+    position: relative;
+    background: $secondary-color url(../img/banner-dots.png) 100% 0 no-repeat;
+    & .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: none;
+        height: 100%;
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55%;
+        height: 100%;
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 18px;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(92% 0, 100% 50%, 92% 100%, 0 100%, 0 0);
+            background: $primary-color;
+        }
+        & img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+    &__inner{
+        width: 30%;
+    }
+    &--first{
+        height: 340px;
+    }
+    &--second{
+        padding: 85px 0;
+        & .sub-banner__bg::before{
+            clip-path: polygon(94.5% 0,100% 50%,94.5% 100%,0 100%,0 0);
+        }
+    }
+    &--third{
+        display: flex;
+        justify-content: space-between;
+        background: $grey-light;
+        & .container{
+            height: unset;
+        }
+        & .sub-banner{
+            &__bg{
+                width: 50%;
+            }
+            &__inner{
+                padding: 0 0 0 60px;
+                width: 50%;
+            }
+            &__clients{
+                justify-content: space-between;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            &__client{
+                display: flex;
+                justify-content: flex-end;
+                width: calc(15%);
+                margin: 20px 0;
+                & img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: fill;
+                }
+            }
+        }
+            
+    }
+}

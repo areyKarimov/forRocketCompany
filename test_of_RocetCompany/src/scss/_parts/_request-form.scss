@@ -1,0 +1,26 @@
+.request-form{
+    &__body{
+        margin-top: 27px;
+    }
+    &__input{
+        &-wrapper{
+            position: relative;
+            margin-bottom: 14px;
+        }
+        &-icon{
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            width: 15px;
+            height: 15px;
+            transform: translateY(-50%);
+        }
+        &-area{
+            width: 100%;
+            padding: 9px 0 9px 40px;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+
+}

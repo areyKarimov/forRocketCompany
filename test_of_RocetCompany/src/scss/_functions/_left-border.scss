@@ -1,0 +1,11 @@
+@mixin left-border ($color: $secondary-color){
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: -35px;
+        width: 8px;
+        height: 100%;
+        background: $color;
+    }
+}

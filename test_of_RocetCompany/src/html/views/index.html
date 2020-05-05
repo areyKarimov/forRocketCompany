@@ -1,0 +1,403 @@
+<% var data = {
+  title: "Заголовок | Проект",
+  author: "Harrix"
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+
+<%= _.template(require('./../includes/sprite.html').default)(data) %>
+
+<%= _.template(require('./../includes/pop-up.html').default)(data) %>
+
+<section class="services">
+  <div class="container">
+    <h2 class="title title--section">Наши услуги</h2>
+    <div class="services__items">
+      <div class="services__item">
+        <a href="#" class="services__item-link"></a>
+        <svg class="services__item-icon">
+          <use xlink:href="#icon-8"></use>
+        </svg>
+        <p class="services__item-name">Демонтаж/монтаж медицинской техники</p>
+      </div>
+      <div class="services__item">
+        <a href="#" class="services__item-link"></a>
+        <svg class="services__item-icon">
+          <use xlink:href="#icon-9"></use>
+        </svg>
+        <p class="services__item-name">Диагностика</p>
+        <p class="services__item-caption">(в рамках договора предоставляется БЕСПЛАТНО)</p>
+      </div>
+      <div class="services__item">
+        <a href="#" class="services__item-link"></a>
+        <svg class="services__item-icon">
+          <use xlink:href="#icon-10"></use>
+        </svg>
+        <p class="services__item-name">Тестирование и пусконаладочные работы</p>
+      </div>
+      <div class="services__item">
+        <a href="#" class="services__item-link"></a>
+        <svg class="services__item-icon">
+          <use xlink:href="#icon-11"></use>
+        </svg>
+        <p class="services__item-name">Техническое обслуживание</p>
+      </div>
+      <div class="services__item">
+        <a href="#" class="services__item-link"></a>
+        <svg class="services__item-icon">
+          <use xlink:href="#icon-12"></use>
+        </svg>
+        <p class="services__item-name">Проверка оборудования</p>
+      </div>
+      <div class="services__item">
+        <a href="#" class="services__item-link"></a>
+        <svg class="services__item-icon">
+          <use xlink:href="#icon-13"></use>
+        </svg>
+        <p class="services__item-name">Ремонт медицинского оборудования</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sub-banner sub-banner--first">
+  <div class="sub-banner__bg"><img src="img/middle-banner-first.png" alt="bg"></div>
+  <div class="container">
+    <h3 class="title title--sub-banner">Оставить заявку на <br> <span>тех. обслуживание</span></h3>
+  <div class="sub-banner__inner">
+    <form action="" class="request-form__body">
+      <div class="request-form__input-wrapper">
+        <svg class="request-form__input-icon">
+          <use xlink:href="#icon-14"></use>
+        </svg>
+        <input type="text" name="name" class="request-form__input-area" placeholder="Как вас зовут?" pattern="[a-zA-z ]{2,}" required></input>
+      </div>
+      <div class="request-form__input-wrapper">
+        <svg class="request-form__input-icon">
+          <use xlink:href="#icon-15"></use>
+        </svg>
+        <input type="number" name="tell" class="request-form__input-area" placeholder="Номер Телефона" pattern="[0-9]{10,}" required></input>
+      </div>
+      <div class="request-form__input-wrapper">
+        <svg class="request-form__input-icon">
+          <use xlink:href="#icon-16"></use>
+        </svg>
+        <input type="text" name="thameMessage" class="request-form__input-area" placeholder="Тема сообщения" required></input>
+      </div>
+      <div class="request-form__input-wrapper">
+        <svg class="request-form__input-icon">
+          <use xlink:href="#icon-17"></use>
+        </svg>
+        <input type="text" name="textMessage" class="request-form__input-area" placeholder="Текст сообщения"></input>
+      </div>
+      <button type="submit" class="button button--square-fill button--form button--white-border">Оформить заявку</button>
+    </form>
+  </div>
+  </div>
+</section>
+
+
+<section class="equipment">
+  <div class="container">
+    <h2 class="title title--section">Оборудование которое мы обслуживаем</h2>
+    <div class="equipment__header">
+      <button class="equipment__tab active">
+        <svg class="equipment__tab-icon">
+          <use xlink:href="#icon-18"></use>
+        </svg>
+        Диагностика
+      </button>
+      <button class="equipment__tab">
+        <svg class="equipment__tab-icon">
+          <use xlink:href="#icon-19"></use>
+        </svg>
+        Ремонт
+      </button>
+      <button class="equipment__tab">
+        <span class="equipment__tab-icon">
+          <img src="img/icon/icon-20.png" alt="icon">
+        </span>
+        Обслуживание
+      </button>
+      <button class="equipment__tab">
+        <svg class="equipment__tab-icon">
+          <use xlink:href="#icon-21"></use>
+        </svg>
+        Монтаж
+      </button>
+    </div>
+    
+    <%= _.template(require('./../includes/tabs.html').default)(data) %>
+
+    <%= _.template(require('./../includes/tabs.html').default)(data) %>
+
+    <%= _.template(require('./../includes/tabs.html').default)(data) %>
+
+    <%= _.template(require('./../includes/tabs.html').default)(data) %>
+
+  </div>
+</section>
+
+
+<section class="sub-banner sub-banner--second">
+  <div class="sub-banner__bg"><img src="img/middle-banner-second.png" alt="bg"></div>
+  <div class="container">
+    <h3 class="title title--sub-banner">Заключить договор на <br> <span>тех. обслуживание</span></h3>
+  <div class="sub-banner__inner">
+    <a href="#" class="button button--square-transp">
+      Узнать подробнее
+      <svg class="button__icon">
+        <use xlink:href="#icon-7" ></use>
+      </svg>
+    </a>
+  </div>
+  </div>
+</section>
+
+
+<section class="about">
+  <div class="container">
+      <div class="about__content">
+        <h2 class="title title--section">О компании «ТОМТ»</h2>
+        <div class="about__article textWP">
+          <h3 class="textWP__title">Компания  «ТОМТ» - это лицензированный высокотехнологичный сервисный центр.</h3>
+          <p class="textWP__text">Мы – это многолетний опыт в сфере ремонта, диагностики, а также профилактики медицинского оборудования. Наши инженеры являются экспертами  в сфере ремонта и обслуживания медицинского и косметологического оборудования. Сотрудники  компании «ТОМТ» постоянно проходят курсы повышения квалификации и являются сертифицированными специалистами. Наш сервисный центр располагает всем  высокотехнологичным современным   оборудованием, которое помогает  оперативно диагностировать и устранить проблему  любой сложности.</p>
+        </div>
+        <div class="about__advantages">
+          <div class="about__advantages-item">
+            <svg class="about__advantages-icon">
+              <use xlink:href="#icon-24"></use>
+            </svg>
+            <p class="about__advantages-name">Система <br> лояльности</p>
+          </div>
+          <div class="about__advantages-item">
+            <svg class="about__advantages-icon">
+              <use xlink:href="#icon-25"></use>
+            </svg>
+            <p class="about__advantages-name">Различные варианты<br> сотрудничества</p>
+          </div>
+          <div class="about__advantages-item">
+            <svg class="about__advantages-icon">
+              <use xlink:href="#icon-26"></use>
+            </svg>
+            <p class="about__advantages-name">Качественный<br> сервис</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper swiper--licenses">
+        <p class="swiper-title">Лицензия</p>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/license_p1.jpg" alt="license"></div>
+            <div class="swiper-slide"><img src="img/license_p2.jpg" alt="license"></div>
+            <div class="swiper-slide"><img src="img/license_p3.jpg" alt="license"></div>
+          </div>
+          <div class="swiper-controls">
+              <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev swiper-button">
+              <svg>
+                <use xlink:href="#icon-22"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-next swiper-button">
+              <svg>
+                <use xlink:href="#icon-23"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="sub-banner sub-banner--third">
+    <div class="sub-banner__bg"><img src="img/middle-banner-third.png" alt="bg"></div>
+    <div class="container">
+      <h3 class="title title--sub-banner">Нам<span> доверяют</span></h3>
+    </div>
+    <div class="sub-banner__inner">
+      <div class="sub-banner__clients">
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo1.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo2.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo3.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo4.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo1.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo2.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo3.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo4.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo1.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo2.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo3.png" alt="logo"></div>
+        <div class="sub-banner__client"><img src="img/middle-banner-three-logo4.png" alt="logo"></div>
+      </div>
+    </div>
+</section>
+
+
+<section class="reviews">
+  <div class="container">
+    <div class="reviews__title">
+      <h2 class="title title--section">Отзывы о нашей работе</h2>
+      <a href="#" class="see-all">
+        Смотреть все
+        <svg class="button__icon">
+          <use xlink:href="#icon-7" ></use>
+        </svg>
+      </a>
+    </div>
+    <article class="review reviews__item">
+      <div class="review__header">
+        <div class="logo logo--small"><img src="img/review-logo1.png" alt="logo"></div>
+        <p class="review__title">Клиника для детей и вздрослых «Лор центр»</p>
+      </div>
+      <p class="review__inner">
+        Возникла необходимость в ремонте электрокардиографа, и мы обратились в компанию ТОМТ. Работа была выполнена оперативно и качественно, по оптимальной стоимости. Теперь ЭКГ аппарат работает исправно, нет никаких нареканий. Мы рассчитываем на долгосрочное сотрудничество с вашей компанией! Спасибо!
+        <span class="review__inner-grad"></span>
+      </p>
+      <div class="review__footer">
+        <div class="review__rate">
+          <div class="stars">
+            <span class="stars__star stars__star--yellow"></span>
+            <span class="stars__star stars__star--yellow"></span>
+            <span class="stars__star stars__star--yellow"></span>
+            <span class="stars__star stars__star--grey"></span>
+            <span class="stars__star stars__star--grey"></span>
+          </div>
+          <p class="date">28.02.2016</p>
+        </div>
+        <div class="review__author">
+          <p class="review__author-name">Елена Варламова</p>
+          <p class="review__author-position">Руководитель </p>
+        </div>
+      </div>
+    </article>
+    <article class="review reviews__item">
+      <div class="review__header">
+        <div class="logo logo--small"><img src="img/review-logo2.png" alt="logo"></div>
+        <p class="review__title">Стоматологическая клиника «Дента люкс»</p>
+      </div>
+      <p class="review__inner">
+        Обращались в компанию ТОМТ за ремонтом физиотерапевтического и стерилизационного оборудования. Специалисты своевременно и качественно устранили неполадки. Планируем заключить с вами договор на техническое обслуживание. Услуги и консультации ЛОР-врачей сегодня очень востребованы, особенно для маленьких пациентов, поэтому мы не можем допустить неисправностей аппаратуры. Надеемся на долгосрочное сотрудничество! Спасибо!
+        <span class="review__inner-grad"></span>
+      </p>
+      <div class="review__footer">
+        <div class="review__rate">
+          <div class="stars">
+            <div class="stars">
+              <span class="stars__star stars__star--yellow"></span>
+              <span class="stars__star stars__star--yellow"></span>
+              <span class="stars__star stars__star--yellow"></span>
+              <span class="stars__star stars__star--grey"></span>
+              <span class="stars__star stars__star--grey"></span>
+            </div>
+          </div>
+          <p class="date">28.02.2016</p>
+        </div>
+        <div class="review__author">
+          <p class="review__author-name">Евгений Понаморев </p>
+          <p class="review__author-position">Руководитель</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<section class="news">
+  <div class="container">
+    <div class="news__articles">
+      <div class="news__title">
+        <h2 class="title title--small">Статьи</h2>
+        <a href="#" class="see-all">
+          Смотреть все
+          <svg class="button__icon">
+            <use xlink:href="#icon-7" ></use>
+          </svg>
+        </a>
+      </div>
+      <article class="news__article">
+        <a href="#" class="news__article-img">
+          <img src="img/articles.jpg" alt="article img">
+        </a>
+        <div class="news__article-inner">
+          <h3 class="news__article-title">Обслуживание и ремонт стоматологического оборудования</h3>
+          <p class="news__article-text">Чтобы удовлетворить все запросы самых требовательных клиентов, стоматологический кабинет сегодня должен быть</p>
+          <div class="news__article-footer">
+            <div class="date news__article-date">
+              <svg class="news__article-icon">
+                <use xlink:href="#icon-29" ></use>
+              </svg>
+              28.02.2016
+            </div>
+            <div class="news__article-looked">
+              <svg class="news__article-icon">
+                <use xlink:href="#icon-30" ></use>
+              </svg>
+              16 769
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="news__article">
+        <a href="#" class="news__article-img">
+          <img src="img/articles.jpg" alt="article img">
+        </a>
+        <div class="news__article-inner">
+          <h3 class="news__article-title">Обслуживание и ремонт стоматологического оборудования</h3>
+          <p class="news__article-text">Чтобы удовлетворить все запросы самых требовательных клиентов, стоматологический кабинет сегодня должен быть</p>
+          <div class="news__article-footer">
+            <div class="date news__article-date">
+              <svg class="news__article-icon">
+                <use xlink:href="#icon-29" ></use>
+              </svg>
+              28.02.2016
+            </div>
+            <div class="news__article-looked">
+              <svg class="news__article-icon">
+                <use xlink:href="#icon-30" ></use>
+              </svg>
+              16 769
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="news__last">
+      <div class="news__title">
+        <h2 class="title title--small">Новости</h2>
+        <a href="#" class="see-all">
+          Смотреть все
+          <svg class="news__article-icon">
+            <use xlink:href="#icon-7" ></use>
+          </svg>
+        </a>
+      </div>
+      <article class="news__article">
+        <div href="#" class="news__article-img">
+          <img src="img/news.jpg" alt="article img">
+        </div>
+        <div class="news__article-inner">
+          <h3 class="news__article-title">Обслуживание и ремонт стоматологического оборудования</h3>
+          <p class="news__article-text">Телеско́п  — прибор, с помощью которого можно наблюдать отдаленные объекты путём сбора электромагнитного излучения (например, видимого света).
+          </p>
+          <div class="news__article-footer">
+            <div class="date news__article-date">
+              <svg class="news__article-icon">
+                <use xlink:href="#icon-29" ></use>
+              </svg>
+              28.02.2016
+            </div>
+            <div class="news__article-looked">
+              <svg class="news__article-icon">
+                <use xlink:href="#icon-30" ></use>
+              </svg>
+              16 769
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

@@ -1,0 +1,15 @@
+.stars{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    &__star{
+        width: 15px;
+        height: 15px;
+        &--yellow{
+            content: url(../img/star-yellow.png);
+        }
+        &--grey{
+            content: url(../img/star-grey.png);
+        }
+    }
+}
