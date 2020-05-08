@@ -80,14 +80,6 @@
 
 @media screen and (max-width: 768px){
   .services{
-    &__item{
-      width: calc(50% - 15px);
-    }
-  }
-}
-
-@media screen and (max-width: 320px){
-  .services{
     &__wrapper{
       padding: 60px 0 60px 10px;;
     }
@@ -96,6 +88,7 @@
     }
   }
 }
+
 
 
 .equipment{
@@ -268,17 +261,6 @@
 @media screen and (max-width: 1026px){
   .equipment{
     &__tab{
-      font-size: 15px;
-    }
-    &__inner{
-      width: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 768px){
-  .equipment{
-    &__tab{
       display: flex;
       align-items: center;
       justify-content: center;
@@ -309,7 +291,8 @@
   }
 }
 
-@media screen and (max-width: 320px){
+
+@media screen and (max-width: 768px){
   .equipment{
     position: relative;
     z-index: 5;
@@ -464,7 +447,6 @@
 }
 
 
-
 .reviews{
   &__wrapper{
     display: flex;
@@ -485,15 +467,15 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1025px){
   .reviews{
    & .see-all{
-     width: 25%;
+     width: 40%;
    }
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
   .reviews{
     &__wrapper{
       position: relative;
@@ -568,16 +550,6 @@
   .about{
     &__wrapper{
       flex-wrap: wrap;
-    }
-    &__content{
-      width: 100%;
-    }
-  }
-}
-
-@media screen and (max-width: 768px){
-  .about{
-    &__wrapper{
       padding: 50px 0 30px 10px;
     }
     &__content{
@@ -586,7 +558,8 @@
   }
 }
 
-@media screen and (max-width: 320px){
+
+@media screen and (max-width: 480px){
   .about{
     &__advantages{
       flex-direction: column;
@@ -730,11 +703,6 @@
         font-size: 12px;
       }
     }
-  }
-}
-
-@media screen and (max-width: 768px){
-  .news{
     &__last{
       & .see-all{
         display: none;
@@ -743,7 +711,8 @@
   }
 }
 
-@media screen and (max-width: 320px){
+
+@media screen and (max-width: 768px){
   .news{
     &__wrapper{
       flex-direction: column;

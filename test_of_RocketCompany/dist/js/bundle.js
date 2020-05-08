@@ -9546,9 +9546,6 @@ window.document.addEventListener('click', event => {
     CLOSEPOPUP(BTNREQUEST, POPUPREQUEST, currentTab);
 
 
-   /*  if ([...SUBMIT].includes(currentTab)){
-        console.log([...SUBMIT]);
-    } */
 
     // burger action
     if (BURGER === currentTab || currentTab.closest('.js-burger')){
@@ -9563,8 +9560,6 @@ window.document.addEventListener('click', event => {
     if (BURGERSUBTAB === currentTab || currentTab.closest('.js-burger-subtab')){
         BURGERSUBTABMENU.classList.toggle('active');
     }
-
-
 });
 
 

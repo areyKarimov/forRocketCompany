@@ -30,6 +30,9 @@ BUTTONS STYLES
     stroke: $primary-color;
     fill: $secondary-color;
     transition: $default-transition;
+    &--mobile{
+      display: none;
+    }
   }
   &--square-transp{
     color: $secondary-color;
@@ -111,11 +114,6 @@ BUTTONS STYLES
     &--square-transp{
       font-size: 14px;
     }
-  }
-}
-
-@media screen and (max-width: 768px){
-  .button{
     &--tablet{
       font-size: 0; 
       background: $secondary-color;
@@ -128,13 +126,19 @@ BUTTONS STYLES
       width: 40px;
       height: 40px;
       fill: $primary-color;
- 
     }
   }
 }
 
+@media screen and (max-width: 768px){
+  .button__icon--mobile{
+    display: inline-block;
+  }
+}
 
-@media screen and (max-width: 320px){
+
+
+@media screen and (max-width: 480px){
   .button{
     font-size: 18px;
     &__header{

@@ -86,7 +86,7 @@
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1025px){
   .footer{
     & .request-form{
       display: none;
@@ -97,7 +97,7 @@
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
   .footer{
     &__main{
       padding: 10px 0 15px 0;

@@ -173,22 +173,6 @@
 @media screen and (max-width: 1026px){
   .swiper{
     &-container{
-        width: 500px;
-    }
-    &--licenses{
-        right: -18%;
-        & .swiper{
-            &-container{
-                width: 240px;
-            }
-        }
-    }
-  }
-}
-
-@media screen and (max-width: 768px){
-  .swiper{
-    &-container{
         width: 350px;
     }
     &--licenses{
@@ -207,7 +191,8 @@
   }
 }
 
-@media screen and (max-width: 320px){
+
+@media screen and (max-width: 768px){
   .swiper{
     &-slide{
         &-name{

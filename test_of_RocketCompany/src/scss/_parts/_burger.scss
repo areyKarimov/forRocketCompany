@@ -63,20 +63,24 @@
 @media screen and (max-width: 768px){
     .burger{
         display: flex;
-    }
-}
-
-@media screen and (max-width: 320px){
-    .burger{
         padding: 0 10px;
         &__menu{
-            width: 100%;
+            width: 50%;
             &.active{
                 animation: burger-menu-anim-mobile 0.3s forwards;
             }
         }
     }
 }
+
+@media screen and (max-width: 480px){
+    .burger{
+        &__menu{
+            width: 100%;
+        }
+    }
+}
+
 
 
 

@@ -41,26 +41,12 @@
 }
 
 @media screen and (max-width: 768px){
-  .equipment{
+  .equipment, .news__title{
     & .see-all{
         & .button__icon--mobile{
             display: inline-block;
         }
-        & svg:not(.button__icon-mobile){
-            display: none;
-        }
-    }
-  }
-}
-
-@media screen and (max-width: 320px){
-  .news__title{
-    & .see-all{
-        font-size: 14px;
-        & .button__icon--mobile{
-            display: inline-block;
-        }
-        & svg:not(.button__icon-mobile){
+        & svg:not(.button__icon--mobile){
             display: none;
         }
     }

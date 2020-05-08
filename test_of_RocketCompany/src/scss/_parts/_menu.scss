@@ -77,8 +77,7 @@
             &:after{
                 left: 0;
             }
-        }
-        
+        }  
     }
     &__submenu{
         position: absolute;
@@ -129,7 +128,6 @@
                     & a{
                         display: flex;
                         justify-content: space-between;
-                        
                     }
                 } 
             }
@@ -163,11 +161,12 @@
 @media screen and (max-width: 1026px){
     .menu{
         &__list{
-            grid-column-gap: 58px;
+            display: flex;
+            justify-content: space-between;
         }
         &__item{
             &::before{
-                left: -29px;
+                display: none;
             }
         }
         &__link{
@@ -177,25 +176,12 @@
             left: -29px;
             width: 275px;
         }
-    }
-}
-
-@media screen and (max-width: 768px){
-    .menu{
-        display: none;
-        &--burger{
-            display: flex;
-        }
         &--footer{
             display: block;
             & .container{
                 background: $grey-light;
             }
             & .menu{
-                &__list{
-                    display: flex;
-                    justify-content: space-between;
-                }
                 &__item{
                     &:hover .menu__submenu{
                         display: none;
@@ -206,18 +192,24 @@
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 768px){
     .menu{
         display: none;
         &--burger{
             display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .menu{
+        &--burger{
             & .menu__submenu{
                 width: 100%;
                 top: 41px;
             }
         }
         &--footer{
-            display: block;
             & .menu{
                 &__list{
                     flex-wrap: wrap;

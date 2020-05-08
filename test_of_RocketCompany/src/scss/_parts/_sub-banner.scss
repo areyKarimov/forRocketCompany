@@ -87,16 +87,8 @@
   }
 }
 
+
 @media screen and (max-width: 768px){
-  .sub-banner{
-    &--third{
-        & .sub-banner__client{
-            width: 25%;
-        }
-    }
-  }
-}
-@media screen and (max-width: 320px){
     .sub-banner{
         & .container{
             flex-direction: column;
@@ -104,6 +96,7 @@
         }
         &__inner{
             width: 100%;
+            max-width: 500px;
         }
         &__bg{
             display: none;
@@ -121,17 +114,18 @@
             position: relative;
             background: transparent;
             flex-direction: column;
-            padding-top: 90px;
+            padding-top: 25%;
             & .title{
                 display: none;
             }
             & .sub-banner{
                 &__inner{
                     width: 100%;
+                    max-width: 100%;
                     padding: 0 25px;
                 }
                 &__client{
-                    width: calc(33.3% - 12px);
+                    width: calc(100%/3 - 12px);
                     margin: 10px 0;
                 }
             }
