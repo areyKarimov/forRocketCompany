@@ -44,7 +44,11 @@
             }
         }
         &-icon{
+            width: 10px;
+            height: 10px;
             margin-left: 5px;
+            stroke: $black;
+            fill: $primary-color;
         }
     }
     &__link{
@@ -103,6 +107,48 @@
             }
         }
     }
+    &--burger{
+        margin-bottom: 0;
+        z-index: -1;
+        &::before{
+            display: none;
+        }
+        & .menu{
+            &__list{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            &__item{
+                padding: 0 15px;
+                &:nth-child(2) {
+                    & .menu__link::after{
+                        display: none;
+                    }
+                    border-bottom: 1px solid $grey;
+                    & a{
+                        display: flex;
+                        justify-content: space-between;
+                        
+                    }
+                } 
+            }
+            &__submenu{
+                top: 40px;
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                left: 0;
+                z-index: 3;
+                transition: $default-transition;
+                background: $grey-light;
+                &.active{
+                    height: 240px;
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
 
 @keyframes submenuAnim{
@@ -111,5 +157,80 @@
     }
     100%{
         bottom: -260px;
+    }
+}
+
+@media screen and (max-width: 1026px){
+    .menu{
+        &__list{
+            grid-column-gap: 58px;
+        }
+        &__item{
+            &::before{
+                left: -29px;
+            }
+        }
+        &__link{
+            font-size: 11px;
+        }
+        &__submenu{
+            left: -29px;
+            width: 275px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        display: none;
+        &--burger{
+            display: flex;
+        }
+        &--footer{
+            display: block;
+            & .container{
+                background: $grey-light;
+            }
+            & .menu{
+                &__list{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                &__item{
+                    &:hover .menu__submenu{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px){
+    .menu{
+        display: none;
+        &--burger{
+            display: flex;
+            & .menu__submenu{
+                width: 100%;
+                top: 41px;
+            }
+        }
+        &--footer{
+            display: block;
+            & .menu{
+                &__list{
+                    flex-wrap: wrap;
+                }
+                &__item{
+                    width: 50%;
+                } 
+                &__link{
+                    text-transform: none;
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+            }  
+        }
     }
 }

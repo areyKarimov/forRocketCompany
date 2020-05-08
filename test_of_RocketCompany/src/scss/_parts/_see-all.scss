@@ -11,6 +11,9 @@
         fill: $primary-color;
         transition: $default-transition;
         right: 0;
+        &.button__icon-mobile{
+            display: none;
+        }
     }
     &:hover{
         & svg{
@@ -18,4 +21,48 @@
             stroke: $black-light;
         }
     }
+    &--textWP{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 14px;
+        color: $black-light;
+        font-weight: 500;
+        opacity: 0.7;
+        & .button__icon{
+            width: 10px;
+            min-width: 10px;
+            margin-left: 10px;
+            stroke: $black-light;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+  .equipment{
+    & .see-all{
+        & .button__icon--mobile{
+            display: inline-block;
+        }
+        & svg:not(.button__icon-mobile){
+            display: none;
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  .news__title{
+    & .see-all{
+        font-size: 14px;
+        & .button__icon--mobile{
+            display: inline-block;
+        }
+        & svg:not(.button__icon-mobile){
+            display: none;
+        }
+    }
+  }
 }

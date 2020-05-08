@@ -9383,9 +9383,17 @@ const SUBWRAPPERS = document.querySelectorAll('.equipment__inner');
 const BTNORDERCALL = document.querySelectorAll('.js-order-call');
 const BTNREQUEST = document.querySelectorAll('.js-request');
 const POPUPCLOSE = document.querySelectorAll('.js-close');
+const POPUPS = document.querySelectorAll('.pop-up');
+const SELECTSUBTAB = document.querySelectorAll('.js-select-subtab');
+const SUBTABSWRAPPER = document.querySelectorAll('.equipment__sub-tabs');
 const POPUPORDERCALL = document.querySelector('.js-pop-up-order-call');
 const POPUPREQUEST = document.querySelector('.js-pop-up-request');
-const POPUPS = document.querySelectorAll('.pop-up');
+const BURGER = document.querySelector('.js-burger');
+const BURGERMENU = document.querySelector('.js-menu-burger');
+const BURGERSUBTAB = document.querySelector('.js-burger-subtab');
+const BURGERSUBTABMENU = document.querySelector('.js-burger-subtab-menu');
+const SELECTTAB = document.querySelector('.js-select-tab');
+
 
 
 
@@ -9408,6 +9416,7 @@ const removeActiveClasses = (tabs, wrappers) => {
 
 //close pop-up on click on close button or on overflow click
 const CLOSEPOPUP = (button, popup, curentEl) => {
+
 
     //click on close button
     if ([...POPUPCLOSE].includes(event.target)) {
@@ -9447,9 +9456,18 @@ const swiper = () =>{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            1030: {
+                slidesPerView: 3,
+                spaceBetweenSlides: 40
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetweenSlides: 0
+            }
+        }
     }); 
 }  
-
 
 
 // after loading page, the first of tabs stand visible and run script on sliders.
@@ -9465,17 +9483,33 @@ window.document.addEventListener(('DOMContentLoaded'), function(){
 
 window.document.addEventListener('click', event => {
     let currentTab = event.target;
-    let indCurrentTab = [...TABS].indexOf(currentTab);
+    let indCurrentTab = [...TABS].indexOf(currentTab.closest('.equipment__tab'));
     let indCurrentSubTab = [...SUBTABS].indexOf(currentTab);
 
+    //click on select
+    if (event.target === SELECTTAB) {
+        [...TABS].forEach(el => el.classList.toggle('active-select'));
+        [...SUBTABSWRAPPER].forEach(el => el.classList.remove('active-select'));
+    }
+
+
+    //click on subselect
+    if ([...SELECTSUBTAB].includes(event.target)) {
+        [...SUBTABSWRAPPER].forEach(el => el.classList.toggle('active-select'));
+    }
+
     //click on tab and open aside-tabs which relative to this tabs, also get to the first aside-tab and equipment-inner class active.
-    if ([...TABS].includes(currentTab)) {
+    if ([...TABS].includes(currentTab.closest('.equipment__tab'))) {
         removeActiveClasses([...TABS], [...WRAPPERS]);
         removeActiveClasses([...SUBTABS], [...SUBWRAPPERS]);
-        currentTab.classList.add('active');
+        currentTab.closest('.equipment__tab').classList.add('active');
         [...WRAPPERS][indCurrentTab].classList.add('active');
         [...WRAPPERS][indCurrentTab].querySelectorAll('.equipment__sub-tab')[0].classList.add('active');
         [...WRAPPERS][indCurrentTab].querySelectorAll('.equipment__inner')[0].classList.add('active');
+        [...WRAPPERS].forEach(el => el.classList.remove('active-select'));
+        SELECTTAB.innerHTML = [...TABS][indCurrentTab].innerHTML;
+        [...TABS].forEach(el => el.classList.remove('active-select'));
+        [...WRAPPERS][indCurrentTab].classList.add('active-select');
         swiper();
     }
 
@@ -9484,11 +9518,15 @@ window.document.addEventListener('click', event => {
         removeActiveClasses([...SUBTABS], [...SUBWRAPPERS]);
         currentTab.classList.add('active');
         [...SUBWRAPPERS][indCurrentSubTab].classList.add('active');
+        [...SUBTABS][indCurrentSubTab].closest('.equipment__body').firstElementChild.innerHTML = [...SUBTABS][indCurrentSubTab].innerHTML;
+        [...SUBWRAPPERS].forEach(el => el.classList.remove('active-select'));
+        [...SUBWRAPPERS][indCurrentSubTab].classList.add('active-select');
+        [...SUBTABS].forEach(el => el.parentElement.classList.remove('active-select'));
         swiper();
     }
 
     //click on btn order call and get pop-up order call vissible
-    if ([...BTNORDERCALL].includes(currentTab)){
+    if ([...BTNORDERCALL].includes(currentTab.closest('.js-order-call'))){
         POPUPORDERCALL.removeAttribute('style');
         POPUPORDERCALL.classList.add('active');
         POPUPORDERCALL.classList.remove('hidden');
@@ -9506,6 +9544,27 @@ window.document.addEventListener('click', event => {
     //calling close function of pup-up window, for review this function look at the top of this js file
     CLOSEPOPUP(BTNORDERCALL, POPUPORDERCALL, currentTab);
     CLOSEPOPUP(BTNREQUEST, POPUPREQUEST, currentTab);
+
+
+   /*  if ([...SUBMIT].includes(currentTab)){
+        console.log([...SUBMIT]);
+    } */
+
+    // burger action
+    if (BURGER === currentTab || currentTab.closest('.js-burger')){
+        BURGER.classList.toggle('active');
+        BURGERMENU.classList.toggle('active');
+    } else if (!currentTab.closest('.js-menu-burger')) {
+        BURGER.classList.remove('active');
+        BURGERMENU.classList.remove('active');
+    }
+
+    // burger subtab(service) action
+    if (BURGERSUBTAB === currentTab || currentTab.closest('.js-burger-subtab')){
+        BURGERSUBTABMENU.classList.toggle('active');
+    }
+
+
 });
 
 

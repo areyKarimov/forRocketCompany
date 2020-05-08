@@ -16,6 +16,70 @@
   <header class="header">
     <div class="header__upside">
       <div class="container">
+        <button class="burger js-burger">
+          <div class="burger__wrapper">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </div>
+        </button>
+        <aside class="burger__menu js-menu-burger">
+          <nav class="menu menu--burger ">
+              <ul class="menu__list">
+                <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+                <li class="menu__item js-burger-subtab">
+                  <div class="menu__link ">Услуги
+                    <svg class="menu__item-icon">
+                      <use xlink:href="#icon-33"></use>
+                    </svg>
+                  </div>
+                  <div class="menu__submenu js-burger-subtab-menu">
+                    <ul class="menu__submenu-list">
+                      <li class="menu__submenu-item"><a href="#" class="menu__submenu-link menu__link">Демонтаж/монтаж</a></li>
+                      <li class="menu__submenu-item"><a href="#" class="menu__submenu-link menu__link">Диагностика</a></li>
+                      <li class="menu__submenu-item"><a href="#" class="menu__submenu-link menu__link">Тех. обслуживание</a></li>
+                      <li class="menu__submenu-item"><a href="#" class="menu__submenu-link menu__link">Ремонт</a></li>
+                      <li class="menu__submenu-item"><a href="#" class="menu__submenu-link menu__link">Проверка оборудования</a></li>
+                      <li class="menu__submenu-item"><a href="#" class="menu__submenu-link menu__link">Тестирование и пусконаладочные работы</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menu__item"><a href="#" class="menu__link">О компании</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Клиентам</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Отзывы</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Статьи</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Новости</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Сотрудничество</a></li>
+              </ul>
+          </nav>
+          <div class="contacts contacts--burger">
+            <div class="contacts__item">
+              <svg class="contacts__item-icon">
+                <use xlink:href="#icon-1"></use>
+              </svg>
+              <div class="contacts__item-content">
+                <p class="contacts__item-text">г.Москва, ул.Парковая 13-я, д.27, корп.1, комната 4</p>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <svg class="contacts__item-icon">
+                <use xlink:href="#icon-2"></use>
+              </svg>
+              <div class="contacts__item-content">
+                <p class="contacts__item-text">Пн-Пт: 9.00 до 18.00 Сб-Вс: выходной</p>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <svg class="contacts__item-icon">
+                <use xlink:href="#icon-3" ></use>
+              </svg>
+              <div class="contacts__item-content">
+                <a href="tel:+79772581790" class="contacts__item-link">+7(977)258-17-90</a>
+                <a href="zapros.tomt@gmail.com" class="contacts__item-link">zapros.tomt@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </aside>
         <a class="logo" href="#"><img src="img/logo.png" alt="TOMS service"></a>
         <div class="contacts">
           <div class="contacts__item">
@@ -44,7 +108,12 @@
             </div>
           </div>
         </div>
-        <button class="button js-order-call">Заказать звонок</button>
+        <button class="button button--tablet js-order-call">
+          Заказать звонок
+          <svg class="button__header-icon">
+            <use xlink:href="#icon-3"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <nav class="menu">
@@ -52,7 +121,10 @@
         <ul class="menu__list">
           <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Услуги<span class="menu__item-icon icon-33"></span></a>
+            <a href="#" class="menu__link">Услуги
+              <svg class="menu__item-icon">
+                <use xlink:href="#icon-33"></use>
+              </svg>
             <div class="menu__submenu">
               <ul class="menu__submenu-list">
                 <li class="menu__submenu-item"><a href="#" class="menu__submenu-link menu__link">Демонтаж/монтаж</a></li>
@@ -74,7 +146,13 @@
       </div>
     </nav>
     <div class="header__main">
-      <div class="header__bg"><img src="img/banner.jpg" alt="background"></div>
+      
+      <div class="header__bg">
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/banner-small.jpg">
+          <img src="img/banner.jpg" alt="background">
+        </picture>
+      </div>
       <div class="container">
         <div class="header__content">
           <h1 class="title">Обслуживание и ремонт <strong>медицинской техники</strong></h1>

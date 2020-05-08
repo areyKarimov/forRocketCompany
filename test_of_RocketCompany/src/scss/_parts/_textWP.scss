@@ -11,3 +11,30 @@
         color: $black;
     }
 }
+
+@media screen and (max-width: 320px){
+    .textWP{
+      &__title{
+        font-size: 16px;
+      }
+      &__text{
+        position: relative;
+        font-size: 16px;
+        line-height: 150%;
+        height: 215px;
+        overflow: hidden;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;    
+            height: 100%;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.59) 80%, rgba(255,255,255,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.59) 80%,rgba(255,255,255,1) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.59) 80%,rgba(255,255,255,1) 100%);
+        }
+        
+      }
+    }
+  }

@@ -101,4 +101,68 @@ BUTTONS STYLES
       color: $secondary-color;
     }
   }
+  &__header-icon{
+    display: none;
+  }
 }
+
+@media screen and (max-width: 1026px){
+  .button{
+    &--square-transp{
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .button{
+    &--tablet{
+      font-size: 0; 
+      background: $secondary-color;
+      height: 100%;
+      padding: 0 40px;
+      border-radius: 0;
+    }
+    &__header-icon{
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      fill: $primary-color;
+ 
+    }
+  }
+}
+
+
+@media screen and (max-width: 320px){
+  .button{
+    font-size: 18px;
+    &__header{
+      &-icon{
+        position: relative;
+        bottom: 2px;
+      }
+    }
+    &--tablet{
+      font-size: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+    }
+    &--square-fill{
+      font-size: 16px;
+    }
+    &--white-border{
+      border: 2px solid $primary-color;
+    }
+    &--square-transp{
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+    }
+  }
+}
+

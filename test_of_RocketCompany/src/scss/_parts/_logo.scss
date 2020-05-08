@@ -7,8 +7,23 @@
         height: 100%;
         object-fit: fill;
     }
-    &--small{
+    &--small.logo{
         width: 65px;
         height: 40px;
+        border-right: none;
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .logo{
+        width: unset;
+        padding: 0 10px;
+        height: 100%;
+        border-right: 1px solid $grey;
+        border-left: 1px solid $grey;
+        & img{
+            object-fit: contain;
+        }
     }
 }

@@ -85,3 +85,42 @@
     }
   }
 }
+
+@media screen and (max-width: 768px){
+  .footer{
+    & .request-form{
+      display: none;
+    }
+    &__services{
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  .footer{
+    &__main{
+      padding: 10px 0 15px 0;
+      & .container{
+        flex-wrap: wrap;
+      }
+      &-title{
+        margin-bottom: 5px;
+      }
+    }
+    &__services{
+      width: 100%;
+    }
+    &__downside{
+      & .container{
+        flex-direction: column;
+      }
+    }
+    &__author{
+      display: none;
+    }
+    &__socials{
+      margin-top: 15px;
+    }
+  }
+}

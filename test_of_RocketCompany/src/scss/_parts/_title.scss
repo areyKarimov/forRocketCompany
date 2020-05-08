@@ -34,3 +34,25 @@
       }
     }
   }
+
+@media screen and (max-width: 768px){
+  .title{
+    &--sub-banner{
+      font-size: 30px;
+    }
+  }
+}
+
+  
+@media screen and (max-width: 320px){
+  .title{
+    font-size: 22px;
+    &::before{
+      left: -10px;
+      width: 5px;
+    }
+    &--sub-banner{
+      margin: 40px 0 0;
+    }
+  }
+}

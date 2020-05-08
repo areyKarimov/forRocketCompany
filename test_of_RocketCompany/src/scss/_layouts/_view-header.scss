@@ -5,6 +5,7 @@
   width: 100%;
   order: 1;
   &__upside{
+    position: relative;
     z-index: 2;
     background: $primary-color;
     padding: 20px 0;
@@ -56,5 +57,43 @@
   }
   & .title{
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .header{
+     &__upside{
+       padding: 0;
+       & .container{
+        padding: 0;
+        height: 45px;
+      }
+    }
+    &__content{
+      padding: 50px 0 50px 35px;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 320px){
+  .header{
+     &__upside{
+       & .container{
+         display: flex;
+         justify-content: space-between;
+         height: 40px;
+       }
+     }
+    &__content{
+      padding: 50px 0 50px 10px;;
+    }
+    &__benefits{
+      &-text{
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+      }
+    }
   }
 }
