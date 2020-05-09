@@ -26,5 +26,9 @@
         & img{
             object-fit: contain;
         }
+        &--small{
+            padding: 0;
+            margin: 0;
+        }
     }
 }

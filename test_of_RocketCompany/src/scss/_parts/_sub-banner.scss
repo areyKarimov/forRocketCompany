@@ -94,6 +94,9 @@
             flex-direction: column;
             justify-content: flex-start;
         }
+        & .title{
+            text-align: center;
+        }
         &__inner{
             width: 100%;
             max-width: 500px;

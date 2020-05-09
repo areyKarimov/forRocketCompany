@@ -91,13 +91,7 @@
         }
     }
 }
-@media screen and (max-width: 830px){
-    .contacts{
-        &__item:nth-child(2){
-            display: none;
-        }
-    }
-}
+
 @media screen and (max-width: 768px){
     .contacts{
         margin: 0;
