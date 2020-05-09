@@ -4,7 +4,7 @@
         overflow: hidden;
         position: absolute;
         top: 15%;
-        right: -32%;
+        left: 74%;
         & .swiper{
             &-title{
                 font-weight: 600;
@@ -177,6 +177,7 @@
     }
     &--licenses{
         position: relative;
+        left: unset;
         right: 0;
         margin-top: 30px;
         & .swiper{
